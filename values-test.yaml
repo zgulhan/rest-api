@@ -1,5 +1,0 @@
-namespace: test
-
-configmap:
-  data:
-    ENV: 'TEST'
