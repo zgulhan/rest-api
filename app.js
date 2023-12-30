@@ -23,8 +23,8 @@ app.use(cors({
 
 
 //mongoose.connect("mongodb+srv://my-rest-api:" + process.env.MONGO_ATLAS_PW + "@my-rest-api.9nx2ruj.mongodb.net/");
-const dblink = process.env.DBSTART + process.env.MONGO_ATLAS_PW + process.env.DBEND;
-mongoose.connect(dblink);
+const dburl = process.env.DBURL;
+mongoose.connect(dburl);
 
 
 app.use(morgan("dev"));
