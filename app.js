@@ -12,7 +12,7 @@ mongoose.set('strictQuery', false);
 
 app.get("/", (req, res) => {
     res.json([{
-        message: 'Listening on port: ' + process.env.PORT + '! ' + + process.env.ENV + ' is deployed successfully.'
+        message: 'Listening on port: ' + process.env.PORT + '! ' + process.env.ENV + ' is deployed successfully.'
     }])
 })
 
