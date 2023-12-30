@@ -1,6 +1,6 @@
 variables:
   IMAGE_NAME: zdgul/myapp
-  IMAGE_TAG: rest-api-4.1
+  IMAGE_TAG: rest-api-4.2
   REGISTRY_USER: zdgul
 
 stages:
