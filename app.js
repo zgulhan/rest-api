@@ -11,6 +11,7 @@ const productRoutes = require("./api/routes/products");
 mongoose.set('strictQuery', false);
 
 app.get("/", (req, res) => {
+    console.log(process.env.ENV)
     res.json([{
         message: 'Listening on port 3000! ' + process.env.ENV + ' is deployed successfully.'
     }])
