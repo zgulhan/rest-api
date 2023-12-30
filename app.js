@@ -11,9 +11,8 @@ const productRoutes = require("./api/routes/products");
 mongoose.set('strictQuery', false);
 
 app.get("/", (req, res) => {
-    console.log(process.env.ENV)
     res.json([{
-        message: 'Listening on port 3000! ' + process.env.ENV + ' is deployed successfully.'
+        message: 'Listening on port: ' + process.env.PORT + process.env.ENV + ' is deployed successfully.'
     }])
 })
 
@@ -23,7 +22,10 @@ app.use(cors({
 }));
 
 
-mongoose.connect("mongodb+srv://my-rest-api:" + process.env.MONGO_ATLAS_PW + "@my-rest-api.9nx2ruj.mongodb.net/");
+//mongoose.connect("mongodb+srv://my-rest-api:" + process.env.MONGO_ATLAS_PW + "@my-rest-api.9nx2ruj.mongodb.net/");
+
+mongoose.connect(process.env.DBSTART + process.env.MONGO_ATLAS_PW + process.env.DBEND);
+
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({extended: false}));
